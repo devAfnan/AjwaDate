@@ -1,0 +1,108 @@
+/* خلفية مموّهة */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('images/background.png'); /* ضع مسار صورة النخيل */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    opacity: 0.35;
+    z-index: -1;
+}
+
+/* Container للنصوص */
+/* إزالة الخلفية */
+.container {
+    max-width: 95%;
+    margin: 15px auto;
+    padding: 18px;
+    border-radius: 10px;
+    color: #3e502a;
+    font-family: 'Arial', sans-serif;
+    /* background-color: rgba(242, 233, 218, 0.85); */ /* أزلنا اللون */
+}
+section p, section h2, ul li {
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* العناوين */
+.main-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #3e502a;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.hadith {
+    font-style: italic;        /* يجعل النص مائلاً */
+    font-size: 16px;           /* حجم مناسب للعرض على الجوال */
+    color: #000;            /* لون مميز */
+    text-align: center;        /* توسيط النص */
+    margin-bottom: 15px;       /* مسافة عن الأقسام التالية */
+}
+
+
+section h2 {
+    font-size: 20px;
+    color: #3e502a;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+/* الفقرات */
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3e502a;
+}
+
+/* القوائم */
+ul {
+    padding-right: 20px;
+    list-style-type: disc;
+}
+
+ul li {
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: #3e502a;
+}
+
+/* Responsive للجوال */
+@media (max-width: 480px) {
+    .main-title { font-size: 22px; }
+    section h2 { font-size: 18px; }
+    section p, ul li { font-size: 14px; }
+    .container { padding: 12px 15px; }
+}
+/* جدول القيمة الغذائية بسيط */
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.nutrition-table th, 
+.nutrition-table td {
+    border: 1px solid #3e502a; /* حدود بلون النص */
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #3e502a;
+}
+
+.nutrition-table th {
+    font-weight: bold;
+    background-color: #f2e9da; /* لون خفيف للهيدر فقط */
+}
+
+@media (max-width: 600px) {
+    .nutrition-table th, 
+    .nutrition-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
